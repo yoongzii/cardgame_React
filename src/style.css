@@ -1,0 +1,58 @@
+/* style.css */
+
+body{
+   background: #333; color: #fff;
+}
+h1{
+   margin: 0; padding: 30px 0;
+   text-align: center;
+   font-size: 24px;
+}
+button{
+   font: inherit; color: inherit;
+   margin: 0; padding: 0px;
+   background: none; border: none;
+   cursor: pointer;
+}
+.board{
+   width: 614px; margin: auto;
+}
+
+header>div {
+   display: flex; justify-content: space-between;
+}
+
+.card_wrap{
+   display: flex; flex-wrap: wrap;
+   gap: 10px; user-select: none;
+}
+
+.card_wrap .card{
+   position: relative;
+   border-radius: 5px;
+   overflow: hidden;
+}
+.card_wrap img{
+   display: block;
+   border: 3px solid #fff;
+}
+
+.card_wrap .front{
+   position: absolute;
+   transform: rotateY(90deg);
+   transition: all 0.2s;
+}
+
+.flipped .front {
+   transform: rotateY(0deg);
+   transition-delay: all 0.2s;
+}
+
+.card_wrap .back {
+   cursor: pointer;
+   transition-delay: all 0.2s;
+}
+
+.flipped .back{
+   transform: rotateY(90deg);
+}
